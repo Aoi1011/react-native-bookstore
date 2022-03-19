@@ -26,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SearchBar from './components/SearchBar';
 
 const Section: React.FC<{
   title: string;
@@ -64,6 +65,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
+      <SearchBar />
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
