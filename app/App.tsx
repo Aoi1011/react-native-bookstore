@@ -8,7 +8,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -17,6 +17,9 @@ import {
   Text,
   useColorScheme,
   View,
+  ActivityIndicator,
+  FlatList,
+  LogBox,
 } from 'react-native';
 
 import {
@@ -59,15 +62,48 @@ const Section: React.FC<{
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [titles, setTitles] = useState<string[]>();
+  const [data, setData] = useState<any[]>([]);
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  const getBooks = async () => {
+    try {
+      const response = await fetch(
+        'https://www.googleapis.com/books/v1/volumes?q=a',
+      );
+      const json = await response.json();
+      LogBox.ignoreAllLogs([""])
+      console.log('Json Data: ', json.items);
+      setData(json.items);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const renderItem = ({item}) => <Text>{item.volumeInfo.title}</Text>;
+
+  useEffect(() => {
+    getBooks();
+
+    // responseItems.map(item => {
+    //   console.log(item.volumeInfo.title);
+    //   titles?.push(item.volumeInfo.title);
+
+    //   console.log('Title 1', titles![1]);
+    // });
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
       <SearchBar />
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
+      {/* <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
@@ -87,7 +123,18 @@ const App = () => {
           </Section>
           <LearnMoreLinks />
         </View>
-      </ScrollView>
+      </ScrollView> */}
+      <View style={{flex: 1, padding: 24}}>
+        {isLoading ? (
+          <ActivityIndicator />
+        ) : (
+          <FlatList
+            data={data}
+            keyExtractor={({id}) => id}
+            renderItem={renderItem}
+          />
+        )}
+      </View>
     </SafeAreaView>
   );
 };
