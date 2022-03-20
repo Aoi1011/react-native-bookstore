@@ -40,10 +40,13 @@ const Home = () => {
 
       let bookData = json.items.map(item => {
         let vi = item.volumeInfo;
+        let year = vi.publishedDate.split('-');
         return {
           id: item.id,
           title: vi.title,
+          authors: vi.authors,
           description: vi.description,
+          publishedDate: year[0],
           link: vi.infoLink,
           image: vi.imageLinks ? vi.imageLinks.smallThumbnail : '',
         };
@@ -69,6 +72,8 @@ const Home = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Explore</Text>
+      <SearchBar />
       <List data={data} />
     </SafeAreaView>
   );
@@ -79,6 +84,11 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight || 0 + 0,
     marginHorizontal: 0,
+  },
+  title: {
+    textAlign: 'center',
+    padding: 20,
+    fontSize: 30,
   },
 });
 

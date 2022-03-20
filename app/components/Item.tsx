@@ -7,7 +7,7 @@ const deviceWidth = Dimensions.get('window').width;
 const Item = ({photo}: {photo: any}): JSX.Element => {
   useEffect(() => {
     photo.image = 'https://reactnative.dev/img/tiny_logo.png';
-    console.log(photo.image);
+    console.log(photo.authors);
   }, [photo]);
 
   return (
@@ -24,7 +24,13 @@ const Item = ({photo}: {photo: any}): JSX.Element => {
         size="extraLarge"
         color="black"
       />
-      <Text>{photo.title}</Text>
+      <View style={styles.right}>
+        <Text style={styles.title} numberOfLines={1}>
+          {photo.title}
+        </Text>
+        <Text style={styles.author}>{photo.authors ? photo.authors : '-'}</Text>
+        <Text style={styles.publishedDate}>{photo.publishedDate}</Text>
+      </View>
     </View>
   );
 };
@@ -35,7 +41,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // justifyContent: 'center',
     borderColor: 'black',
-    borderWidth: 1,
+    height: 100,
+    paddingRight: 30,
+    paddingLeft: 15,
   },
   item: {
     backgroundColor: 'aqua',
@@ -44,6 +52,22 @@ const styles = StyleSheet.create({
     // height: 200,
     // width: 50,
     // height: 50,
+  },
+  right: {
+    // paddingRight: 10,
+    // paddingLeft: 10,
+    padding: 10,
+  },
+  title: {
+    // paddingLeft: 10,
+  },
+  author: {
+    // paddingLeft: 10,
+    // paddingTop: 1,
+  },
+  publishedDate: {
+    backgroundColor: '#c2613d',
+    width: 40,
   },
 });
 export default Item;
