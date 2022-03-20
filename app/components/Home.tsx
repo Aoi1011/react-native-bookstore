@@ -43,7 +43,7 @@ const Home = () => {
           title: vi.title,
           description: vi.description,
           link: vi.infoLink,
-          image: vi.imageLinks ? vi.imageLinks.smallThumbnail + '.jpg' : '',
+          image: vi.imageLinks ? vi.imageLinks.smallThumbnail : '',
         };
       });
       setData(bookData);

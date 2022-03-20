@@ -9,7 +9,6 @@ const List = ({data}: {data: Array<any>}): JSX.Element => {
     <FlatList
       style={styles.container}
       data={data}
-      numColumns={2}
       renderItem={renderItem}
       keyExtractor={(item: any) => item.id.toString()}
     />
