@@ -24,7 +24,7 @@ import SearchBar from './SearchBar';
 import List from './List';
 import Data from '../data.json';
 
-const Home = () => {
+const Home = ({navigation}) => {
   // const data = sampleData;
   const [isLoading, setIsLoading] = useState(true);
   const [titles, setTitles] = useState<string[]>();

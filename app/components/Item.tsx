@@ -1,5 +1,13 @@
 import React, {useEffect} from 'react';
-import {StyleSheet, Image, Dimensions, View, Text, Linking} from 'react-native';
+import {
+  StyleSheet,
+  Image,
+  Dimensions,
+  View,
+  Text,
+  Linking,
+  TouchableHighlight,
+} from 'react-native';
 import {Button} from 'react-native-elements';
 
 import {MaterialIcon} from './Icon';
@@ -7,6 +15,9 @@ import {MaterialIcon} from './Icon';
 const deviceWidth = Dimensions.get('window').width;
 
 const Item = ({photo}: {photo: any}): JSX.Element => {
+  const handleDetail = () => {
+    alert('Hello');
+  };
   useEffect(() => {
     photo.image = 'https://reactnative.dev/img/tiny_logo.png';
     console.log(photo.authors);
@@ -26,13 +37,18 @@ const Item = ({photo}: {photo: any}): JSX.Element => {
         size="extraLarge"
         color="black"
       />
-      <View style={styles.center}>
-        <Text style={styles.title} numberOfLines={1}>
-          {photo.title}
-        </Text>
-        <Text style={styles.author}>{photo.authors ? photo.authors : '-'}</Text>
-        <Text style={styles.publishedDate}>{photo.publishedDate}</Text>
-      </View>
+      <TouchableHighlight onPress={handleDetail} underlayColor="white">
+        <View style={styles.center}>
+          <Text style={styles.title} numberOfLines={1}>
+            {photo.title}
+          </Text>
+          <Text style={styles.author}>
+            {photo.authors ? photo.authors : '-'}
+          </Text>
+          <Text style={styles.publishedDate}>{photo.publishedDate}</Text>
+        </View>
+      </TouchableHighlight>
+
       <Button
         icon={
           <MaterialIcon name="book-search-outline" size="large" color="black" />
