@@ -47,6 +47,7 @@ const Home = () => {
           authors: vi.authors,
           description: vi.description,
           publishedDate: year[0],
+          previewLink: vi.previewLink,
           link: vi.infoLink,
           image: vi.imageLinks ? vi.imageLinks.smallThumbnail : '',
         };
