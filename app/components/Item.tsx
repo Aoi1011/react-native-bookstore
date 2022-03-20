@@ -12,8 +12,6 @@ import {Button} from 'react-native-elements';
 
 import {MaterialIcon} from './Icon';
 
-const deviceWidth = Dimensions.get('window').width;
-
 const Item = ({
   photo,
   navigation,
@@ -21,8 +19,10 @@ const Item = ({
   photo: any;
   navigation: any;
 }): JSX.Element => {
-  const handleDetail = () => {
-    navigation.navigate('Detail');
+  const handleDetail = selfLink => {
+    navigation.navigate('Detail', {
+      selfLink: selfLink,
+    });
   };
   useEffect(() => {
     photo.image = 'https://reactnative.dev/img/tiny_logo.png';
@@ -31,19 +31,10 @@ const Item = ({
 
   return (
     <View style={styles.container}>
-      {/* <Image
-        style={styles.item}
-        resizeMode={'cover'}
-        source={{uri: photo.image}}
-        width={deviceWidth / 2 - 4 * 2}
-        height={200}
-      /> */}
-      <MaterialIcon
-        name="book-open-blank-variant"
-        size="extraLarge"
-        color="black"
-      />
-      <TouchableHighlight onPress={handleDetail} underlayColor="white">
+      <MaterialIcon name="book-open-blank-variant" size="large" color="black" />
+      <TouchableHighlight
+        onPress={() => handleDetail(photo.selfLink)}
+        underlayColor="white">
         <View style={styles.center}>
           <Text style={styles.title} numberOfLines={1}>
             {photo.title}

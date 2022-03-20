@@ -17,7 +17,7 @@ export const IconSizes = {
   small: 13,
   medium: 18,
   large: 30,
-  extraLarge: 50,
+  extraLarge: 200,
 };
 
 export const MaterialIcon = ({size, name, color}: IconProps) => (

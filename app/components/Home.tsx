@@ -27,7 +27,6 @@ import Data from '../data.json';
 
 const Home = ({navigation}) => {
   // const data = sampleData;
-  const [isLoading, setIsLoading] = useState(true);
   const [titles, setTitles] = useState<string[]>();
   const [data, setData] = useState<any[]>([]);
 
@@ -49,6 +48,7 @@ const Home = ({navigation}) => {
           description: vi.description,
           publishedDate: year[0],
           previewLink: vi.previewLink,
+          selfLink: item.selfLink,
           link: vi.infoLink,
           image: vi.imageLinks ? vi.imageLinks.smallThumbnail : '',
         };
@@ -56,8 +56,6 @@ const Home = ({navigation}) => {
       setData(bookData);
     } catch (err) {
       console.error(err);
-    } finally {
-      setIsLoading(false);
     }
   };
 
