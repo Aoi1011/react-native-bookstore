@@ -8,6 +8,7 @@ import {
   ScrollView,
   TouchableHighlight,
   StyleSheet,
+  TouchableOpacity,
 } from 'react-native';
 import RenderHTML from 'react-native-render-html';
 
@@ -92,6 +93,9 @@ const Detail = ({route, navigation}) => {
                 />
               </TouchableHighlight>
             </View>
+            <TouchableOpacity style={styles.button}>
+              <Text>ORDER</Text>
+            </TouchableOpacity>
             <View
               style={{
                 borderBottomColor: 'black',
@@ -120,7 +124,9 @@ const Detail = ({route, navigation}) => {
                 borderBottomWidth: 1,
               }}
             />
-            <ScrollView horizontal={true} style={{paddingTop: 30}}>
+            <ScrollView
+              horizontal={true}
+              style={{paddingTop: 30, paddingBottom: 30}}>
               <View style={styles.horizontal}>
                 <Text style={styles.horizontalTitle}>GENRE</Text>
                 <Text style={styles.horizontalTitle}>
@@ -164,7 +170,12 @@ const Detail = ({route, navigation}) => {
                 </Text>
               </View>
             </ScrollView>
-            <Text style={{paddingBottom: 50}}>Hello</Text>
+            <View
+              style={{
+                borderBottomColor: 'black',
+                borderBottomWidth: 1,
+              }}
+            />
           </ScrollView>
         </View>
       )}
@@ -173,6 +184,16 @@ const Detail = ({route, navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  buttonContainer: {
+    paddingBottom: 30,
+    paddingHorizontal: 12,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#2ca4bb',
+    padding: 10,
+    marginBottom: 30,
+  },
   horizontal: {
     paddingLeft: 10,
     paddingRight: 10,
