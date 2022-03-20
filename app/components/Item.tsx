@@ -14,13 +14,19 @@ import {MaterialIcon} from './Icon';
 
 const deviceWidth = Dimensions.get('window').width;
 
-const Item = ({photo}: {photo: any}): JSX.Element => {
+const Item = ({
+  photo,
+  navigation,
+}: {
+  photo: any;
+  navigation: any;
+}): JSX.Element => {
   const handleDetail = () => {
-    alert('Hello');
+    navigation.navigate('Detail');
   };
   useEffect(() => {
     photo.image = 'https://reactnative.dev/img/tiny_logo.png';
-    console.log(photo.authors);
+    // console.log(photo.authors);
   }, [photo]);
 
   return (

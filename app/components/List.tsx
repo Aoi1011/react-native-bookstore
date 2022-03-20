@@ -2,8 +2,16 @@ import React from 'react';
 import {StyleSheet, FlatList, StatusBar} from 'react-native';
 import Item from './Item';
 
-const List = ({data}: {data: Array<any>}): JSX.Element => {
-  const renderItem = ({item}: {item: any}) => <Item photo={item} />;
+const List = ({
+  data,
+  navigation,
+}: {
+  data: Array<any>;
+  navigation: any;
+}): JSX.Element => {
+  const renderItem = ({item}: {item: any}) => (
+    <Item photo={item} navigation={navigation} />
+  );
 
   return (
     <FlatList

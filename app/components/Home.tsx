@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {
   SafeAreaView,
   ScrollView,
@@ -60,6 +61,10 @@ const Home = ({navigation}) => {
     }
   };
 
+  //   const handleDetail = () => {
+  //     navigation.navigate('Detail');
+  //   };
+
   useEffect(() => {
     getBooks();
 
@@ -75,7 +80,7 @@ const Home = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Explore</Text>
       <SearchBar />
-      <List data={data} />
+      <List data={data} navigation={navigation} />
     </SafeAreaView>
   );
 };
