@@ -1,0 +1,587 @@
+{
+  "status": "success",
+  "result": [
+    {
+      "id": 8,
+      "title": "Think and Grow Rich",
+      "isbn": "4-f-g",
+      "edition": 1,
+      "numberOfPages": 371,
+      "shortSummary": "Think and Grow Rich by Napoleon Hill examines the psychological power of thought and the brain in the process of furthering your career for both monetary and personal satisfaction",
+      "longSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini.[1] Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul. The story is set against a backdrop of tumultuous events, from the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father-son relationship story, emphasizing the familial aspects of the narrative, an element that he continued to use in his later works.[2] Themes of guilt and redemption feature prominently in the novel,[3] with a pivotal scene depicting an act of sexual assault that happens against Hassan that Amir fails to prevent. The situation as a whole was the main reason why Amir and Hassan's friendship ended. The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son two decades later",
+      "averageRating": 3,
+      "isPaid": false,
+      "isApproved": true,
+      "isPopular": false,
+      "isTrending": false,
+      "price": 500,
+      "coverPicture": null,
+      "userId": 1,
+      "createdAt": "2021-08-26T07:21:59.074Z",
+      "updatedAt": "2021-08-27T11:41:37.124Z",
+      "deletedAt": null,
+      "bookAuthors": [
+        {
+          "authorId": 1,
+          "author": {
+            "id": 1,
+            "name": "name of author",
+            "picture": "uploads/authors/images/image1-1629024213391.jpeg"
+          }
+        },
+        {
+          "authorId": 2,
+          "author": {
+            "id": 2,
+            "name": "Khaled Hosseini",
+            "picture": "uploads/authors/images/image1-1629024305791.jpeg"
+          }
+        }
+      ],
+      "bookLanguages": [
+        {"id": 8, "language": {"id": 1, "language": "english"}}
+      ],
+      "bookCategories": [
+        {
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "title": "Classic",
+            "createdAt": "2021-08-15T10:49:51.049Z",
+            "updatedAt": "2021-08-15T10:49:51.049Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 4,
+          "category": {
+            "id": 4,
+            "title": "Thriller",
+            "createdAt": "2021-08-15T10:50:32.071Z",
+            "updatedAt": "2021-08-15T10:50:32.071Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 5,
+          "category": {
+            "id": 5,
+            "title": "Biography",
+            "createdAt": "2021-08-15T10:50:45.632Z",
+            "updatedAt": "2021-08-15T10:50:45.632Z",
+            "deletedAt": null
+          }
+        }
+      ],
+      "bookFiles": []
+    },
+    {
+      "id": 4,
+      "title": "Sea Prayer",
+      "isbn": "4-f-g",
+      "edition": 1,
+      "numberOfPages": 371,
+      "shortSummary": "a father's reflection as he watches over his sleeping son, on the dangerous journey across the sea that lies before them. An account of their life in Homs, Syria, before the war and of that city's swift transformation into a deadly war zone.",
+      "longSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini.[1] Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul. The story is set against a backdrop of tumultuous events, from the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father-son relationship story, emphasizing the familial aspects of the narrative, an element that he continued to use in his later works.[2] Themes of guilt and redemption feature prominently in the novel,[3] with a pivotal scene depicting an act of sexual assault that happens against Hassan that Amir fails to prevent. The situation as a whole was the main reason why Amir and Hassan's friendship ended. The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son two decades later",
+      "averageRating": 0,
+      "isPaid": false,
+      "isApproved": true,
+      "isPopular": false,
+      "isTrending": false,
+      "price": 500,
+      "coverPicture": "uploads/books/pictures/picture1-1629791341293.jpeg",
+      "userId": 1,
+      "createdAt": "2021-08-15T11:05:44.644Z",
+      "updatedAt": "2021-08-27T07:13:19.650Z",
+      "deletedAt": null,
+      "bookAuthors": [
+        {
+          "authorId": 1,
+          "author": {
+            "id": 1,
+            "name": "name of author",
+            "picture": "uploads/authors/images/image1-1629024213391.jpeg"
+          }
+        }
+      ],
+      "bookLanguages": [
+        {"id": 4, "language": {"id": 1, "language": "english"}}
+      ],
+      "bookCategories": [
+        {
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "title": "Classic",
+            "createdAt": "2021-08-15T10:49:51.049Z",
+            "updatedAt": "2021-08-15T10:49:51.049Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 2,
+          "category": {
+            "id": 2,
+            "title": "Drama",
+            "createdAt": "2021-08-15T10:49:38.629Z",
+            "updatedAt": "2021-08-15T10:49:38.629Z",
+            "deletedAt": null
+          }
+        }
+      ],
+      "bookFiles": [
+        {
+          "id": 4,
+          "path": "uploads/books/book1-1629026681484.pdf",
+          "name": "Sea Prayer",
+          "picture": "uploads/books/pictures/picture1-1629090471259.jpeg",
+          "bookId": 4,
+          "createdAt": "2021-08-15T11:24:41.525Z",
+          "updatedAt": "2021-08-16T05:07:51.461Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "And The Mountains Echoed",
+      "isbn": "4-f-g",
+      "edition": 1,
+      "numberOfPages": 371,
+      "shortSummary": "a father tells his two children: A farmer who works hard to eke out a living for his family is forced to give up one of his five children to an evil giant. He and his wife decide to choose randomly, and the unlucky one happens to be their favorite son.",
+      "longSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini.[1] Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul. The story is set against a backdrop of tumultuous events, from the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father-son relationship story, emphasizing the familial aspects of the narrative, an element that he continued to use in his later works.[2] Themes of guilt and redemption feature prominently in the novel,[3] with a pivotal scene depicting an act of sexual assault that happens against Hassan that Amir fails to prevent. The situation as a whole was the main reason why Amir and Hassan's friendship ended. The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son two decades later",
+      "averageRating": 0,
+      "isPaid": false,
+      "isApproved": true,
+      "isPopular": false,
+      "isTrending": false,
+      "price": 0,
+      "coverPicture": "uploads/books/pictures/picture1-1629791355876.jpeg",
+      "userId": 1,
+      "createdAt": "2021-08-15T11:05:13.734Z",
+      "updatedAt": "2021-08-27T07:11:33.159Z",
+      "deletedAt": null,
+      "bookAuthors": [
+        {
+          "authorId": 1,
+          "author": {
+            "id": 1,
+            "name": "name of author",
+            "picture": "uploads/authors/images/image1-1629024213391.jpeg"
+          }
+        }
+      ],
+      "bookLanguages": [
+        {"id": 3, "language": {"id": 1, "language": "english"}}
+      ],
+      "bookCategories": [
+        {
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "title": "Classic",
+            "createdAt": "2021-08-15T10:49:51.049Z",
+            "updatedAt": "2021-08-15T10:49:51.049Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 2,
+          "category": {
+            "id": 2,
+            "title": "Drama",
+            "createdAt": "2021-08-15T10:49:38.629Z",
+            "updatedAt": "2021-08-15T10:49:38.629Z",
+            "deletedAt": null
+          }
+        }
+      ],
+      "bookFiles": [
+        {
+          "id": 5,
+          "path": "uploads/books/book1-1629026703306.pdf",
+          "name": "And The Mountains Echoed",
+          "picture": "uploads/books/pictures/picture1-1629090481197.jpeg",
+          "bookId": 3,
+          "createdAt": "2021-08-15T11:25:03.331Z",
+          "updatedAt": "2021-08-16T05:08:01.199Z"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "All the Light We Cannot See",
+      "isbn": "4-f-g",
+      "edition": 1,
+      "numberOfPages": 371,
+      "shortSummary": " multiple award-winning Anthony Doerr, the beautiful, stunningly ambitious instant New York Times bestseller about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II.",
+      "longSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini.[1] Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul. The story is set against a backdrop of tumultuous events, from the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father-son relationship story, emphasizing the familial aspects of the narrative, an element that he continued to use in his later works.[2] Themes of guilt and redemption feature prominently in the novel,[3] with a pivotal scene depicting an act of sexual assault that happens against Hassan that Amir fails to prevent. The situation as a whole was the main reason why Amir and Hassan's friendship ended. The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son two decades later",
+      "averageRating": 0,
+      "isPaid": false,
+      "isApproved": true,
+      "isPopular": false,
+      "isTrending": false,
+      "price": 150,
+      "coverPicture": "uploads/books/pictures/picture1-1629791284774.jpeg",
+      "userId": 1,
+      "createdAt": "2021-08-15T11:07:16.298Z",
+      "updatedAt": "2021-08-27T07:07:42.620Z",
+      "deletedAt": null,
+      "bookAuthors": [
+        {
+          "authorId": 1,
+          "author": {
+            "id": 1,
+            "name": "name of author",
+            "picture": "uploads/authors/images/image1-1629024213391.jpeg"
+          }
+        }
+      ],
+      "bookLanguages": [
+        {"id": 5, "language": {"id": 1, "language": "english"}}
+      ],
+      "bookCategories": [
+        {
+          "categoryId": 5,
+          "category": {
+            "id": 5,
+            "title": "Biography",
+            "createdAt": "2021-08-15T10:50:45.632Z",
+            "updatedAt": "2021-08-15T10:50:45.632Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "title": "Classic",
+            "createdAt": "2021-08-15T10:49:51.049Z",
+            "updatedAt": "2021-08-15T10:49:51.049Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 4,
+          "category": {
+            "id": 4,
+            "title": "Thriller",
+            "createdAt": "2021-08-15T10:50:32.071Z",
+            "updatedAt": "2021-08-15T10:50:32.071Z",
+            "deletedAt": null
+          }
+        }
+      ],
+      "bookFiles": [
+        {
+          "id": 3,
+          "path": "uploads/books/book1-1629026579662.pdf",
+          "name": "All the Light We Cannot See",
+          "picture": "uploads/books/pictures/picture1-1629090452743.jpeg",
+          "bookId": 5,
+          "createdAt": "2021-08-15T11:22:59.689Z",
+          "updatedAt": "2021-08-16T05:07:32.750Z"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "A Little Life",
+      "isbn": "4-f-g",
+      "edition": 1,
+      "numberOfPages": 371,
+      "shortSummary": " lives of four friends in New York City from college through to middle-age. It focuses particularly on Jude, a lawyer with a mysterious past, ambiguous ethnicity, and unexplained health issues.",
+      "longSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini.[1] Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul. The story is set against a backdrop of tumultuous events, from the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father-son relationship story, emphasizing the familial aspects of the narrative, an element that he continued to use in his later works.[2] Themes of guilt and redemption feature prominently in the novel,[3] with a pivotal scene depicting an act of sexual assault that happens against Hassan that Amir fails to prevent. The situation as a whole was the main reason why Amir and Hassan's friendship ended. The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son two decades later",
+      "averageRating": 0,
+      "isPaid": false,
+      "isApproved": true,
+      "isPopular": false,
+      "isTrending": false,
+      "price": 600,
+      "coverPicture": "uploads/books/pictures/picture1-1629791266821.jpeg",
+      "userId": 1,
+      "createdAt": "2021-08-15T11:09:04.121Z",
+      "updatedAt": "2021-08-27T07:06:21.093Z",
+      "deletedAt": null,
+      "bookAuthors": [
+        {
+          "authorId": 2,
+          "author": {
+            "id": 2,
+            "name": "Khaled Hosseini",
+            "picture": "uploads/authors/images/image1-1629024305791.jpeg"
+          }
+        }
+      ],
+      "bookLanguages": [
+        {"id": 6, "language": {"id": 1, "language": "english"}}
+      ],
+      "bookCategories": [
+        {
+          "categoryId": 5,
+          "category": {
+            "id": 5,
+            "title": "Biography",
+            "createdAt": "2021-08-15T10:50:45.632Z",
+            "updatedAt": "2021-08-15T10:50:45.632Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "title": "Classic",
+            "createdAt": "2021-08-15T10:49:51.049Z",
+            "updatedAt": "2021-08-15T10:49:51.049Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 4,
+          "category": {
+            "id": 4,
+            "title": "Thriller",
+            "createdAt": "2021-08-15T10:50:32.071Z",
+            "updatedAt": "2021-08-15T10:50:32.071Z",
+            "deletedAt": null
+          }
+        }
+      ],
+      "bookFiles": [
+        {
+          "id": 9,
+          "path": "uploads/books/book1-1629121096840.pdf",
+          "name": "A Little Life",
+          "picture": null,
+          "bookId": 6,
+          "createdAt": "2021-08-16T13:38:17.359Z",
+          "updatedAt": "2021-08-16T13:38:17.359Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "A Thousand Splendid Suns",
+      "isbn": "4-f-g",
+      "edition": 1,
+      "numberOfPages": 371,
+      "shortSummary": "civil war and Taliban tyranny seen from the perspectives of two women. Mariam  daughter of a wealthy businessman, forced at age fifteen into marrying Rasheed, who grows increasingly brutal when she fails to produce a child.",
+      "longSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini.[1] Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul. The story is set against a backdrop of tumultuous events, from the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father-son relationship story, emphasizing the familial aspects of the narrative, an element that he continued to use in his later works.[2] Themes of guilt and redemption feature prominently in the novel,[3] with a pivotal scene depicting an act of sexual assault that happens against Hassan that Amir fails to prevent. The situation as a whole was the main reason why Amir and Hassan's friendship ended. The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son two decades later",
+      "averageRating": 5,
+      "isPaid": false,
+      "isApproved": true,
+      "isPopular": false,
+      "isTrending": false,
+      "price": 300,
+      "coverPicture": "uploads/books/pictures/picture1-1629791361608.jpeg",
+      "userId": 1,
+      "createdAt": "2021-08-15T11:04:31.149Z",
+      "updatedAt": "2021-08-27T07:04:35.390Z",
+      "deletedAt": null,
+      "bookAuthors": [
+        {
+          "authorId": 1,
+          "author": {
+            "id": 1,
+            "name": "name of author",
+            "picture": "uploads/authors/images/image1-1629024213391.jpeg"
+          }
+        }
+      ],
+      "bookLanguages": [
+        {"id": 2, "language": {"id": 1, "language": "english"}}
+      ],
+      "bookCategories": [
+        {
+          "categoryId": 2,
+          "category": {
+            "id": 2,
+            "title": "Drama",
+            "createdAt": "2021-08-15T10:49:38.629Z",
+            "updatedAt": "2021-08-15T10:49:38.629Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "title": "Classic",
+            "createdAt": "2021-08-15T10:49:51.049Z",
+            "updatedAt": "2021-08-15T10:49:51.049Z",
+            "deletedAt": null
+          }
+        }
+      ],
+      "bookFiles": [
+        {
+          "id": 6,
+          "path": "uploads/books/book1-1629026747592.pdf",
+          "name": "A Thousand Splendid Suns",
+          "picture": "uploads/books/pictures/picture1-1629028563218.jpeg",
+          "bookId": 2,
+          "createdAt": "2021-08-15T11:25:47.599Z",
+          "updatedAt": "2021-08-15T11:56:03.223Z"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Think and Grow Rich 4",
+      "isbn": "4-f-g",
+      "edition": 1,
+      "numberOfPages": 371,
+      "shortSummary": "Think and Grow Rich by Napoleon Hill examines the psychological power of thought and the brain in the process of furthering your career for both monetary and personal satisfaction",
+      "longSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini.[1] Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul. The story is set against a backdrop of tumultuous events, from the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father-son relationship story, emphasizing the familial aspects of the narrative, an element that he continued to use in his later works.[2] Themes of guilt and redemption feature prominently in the novel,[3] with a pivotal scene depicting an act of sexual assault that happens against Hassan that Amir fails to prevent. The situation as a whole was the main reason why Amir and Hassan's friendship ended. The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son two decades later",
+      "averageRating": 0,
+      "isPaid": false,
+      "isApproved": true,
+      "isPopular": false,
+      "isTrending": false,
+      "price": 700,
+      "coverPicture": null,
+      "userId": 1,
+      "createdAt": "2021-08-27T05:34:45.004Z",
+      "updatedAt": "2021-08-27T07:02:35.584Z",
+      "deletedAt": null,
+      "bookAuthors": [
+        {
+          "authorId": 1,
+          "author": {
+            "id": 1,
+            "name": "name of author",
+            "picture": "uploads/authors/images/image1-1629024213391.jpeg"
+          }
+        },
+        {
+          "authorId": 2,
+          "author": {
+            "id": 2,
+            "name": "Khaled Hosseini",
+            "picture": "uploads/authors/images/image1-1629024305791.jpeg"
+          }
+        }
+      ],
+      "bookLanguages": [
+        {"id": 9, "language": {"id": 1, "language": "english"}}
+      ],
+      "bookCategories": [
+        {
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "title": "Classic",
+            "createdAt": "2021-08-15T10:49:51.049Z",
+            "updatedAt": "2021-08-15T10:49:51.049Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 2,
+          "category": {
+            "id": 2,
+            "title": "Drama",
+            "createdAt": "2021-08-15T10:49:38.629Z",
+            "updatedAt": "2021-08-15T10:49:38.629Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 5,
+          "category": {
+            "id": 5,
+            "title": "Biography",
+            "createdAt": "2021-08-15T10:50:45.632Z",
+            "updatedAt": "2021-08-15T10:50:45.632Z",
+            "deletedAt": null
+          }
+        }
+      ],
+      "bookFiles": []
+    },
+    {
+      "id": 1,
+      "title": "The Kite Runner",
+      "isbn": "4-f-g",
+      "edition": 1,
+      "numberOfPages": 371,
+      "shortSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini. Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul.",
+      "longSummary": "The Kite Runner is the first novel by Afghan-American author Khaled Hosseini.[1] Published in 2003 by Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul. The story is set against a backdrop of tumultuous events, from the fall of Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father-son relationship story, emphasizing the familial aspects of the narrative, an element that he continued to use in his later works.[2] Themes of guilt and redemption feature prominently in the novel,[3] with a pivotal scene depicting an act of sexual assault that happens against Hassan that Amir fails to prevent. The situation as a whole was the main reason why Amir and Hassan's friendship ended. The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son two decades later",
+      "averageRating": 3,
+      "isPaid": false,
+      "isApproved": true,
+      "isPopular": false,
+      "isTrending": false,
+      "price": 200,
+      "coverPicture": "uploads/books/pictures/picture1-1629883929312.jpeg",
+      "userId": 1,
+      "createdAt": "2021-08-15T11:03:16.328Z",
+      "updatedAt": "2021-08-26T09:54:25.928Z",
+      "deletedAt": null,
+      "bookAuthors": [
+        {
+          "authorId": 1,
+          "author": {
+            "id": 1,
+            "name": "name of author",
+            "picture": "uploads/authors/images/image1-1629024213391.jpeg"
+          }
+        }
+      ],
+      "bookLanguages": [
+        {"id": 1, "language": {"id": 1, "language": "english"}}
+      ],
+      "bookCategories": [
+        {
+          "categoryId": 2,
+          "category": {
+            "id": 2,
+            "title": "Drama",
+            "createdAt": "2021-08-15T10:49:38.629Z",
+            "updatedAt": "2021-08-15T10:49:38.629Z",
+            "deletedAt": null
+          }
+        },
+        {
+          "categoryId": 3,
+          "category": {
+            "id": 3,
+            "title": "Classic",
+            "createdAt": "2021-08-15T10:49:51.049Z",
+            "updatedAt": "2021-08-15T10:49:51.049Z",
+            "deletedAt": null
+          }
+        }
+      ],
+      "bookFiles": [
+        {
+          "id": 7,
+          "path": "uploads/books/book1-1629026769387.pdf",
+          "name": "The Kite Runner",
+          "picture": "uploads/books/pictures/picture1-1629090520446.jpeg",
+          "bookId": 1,
+          "createdAt": "2021-08-15T11:26:09.410Z",
+          "updatedAt": "2021-08-16T05:08:40.447Z"
+        },
+        {
+          "id": 8,
+          "path": "uploads/books/book1-1629091087778.pdf",
+          "name": "The Kite Runner",
+          "picture": null,
+          "bookId": 1,
+          "createdAt": "2021-08-16T05:18:07.784Z",
+          "updatedAt": "2021-08-16T05:18:07.784Z"
+        },
+        {
+          "id": 1,
+          "path": "uploads/books/book1-1629026502601.pdf",
+          "name": "Book 3 part 2",
+          "picture": "uploads/books/pictures/picture18-1629117320009.jpeg",
+          "bookId": 1,
+          "createdAt": "2021-08-15T11:21:42.614Z",
+          "updatedAt": "2021-08-16T12:35:20.017Z"
+        }
+      ]
+    }
+  ]
+}
