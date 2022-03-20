@@ -15,7 +15,7 @@ export interface IconProps {
 
 export const IconSizes = {
   small: 13,
-  medium: 18,
+  medium: 25,
   large: 30,
   extraLarge: 200,
 };

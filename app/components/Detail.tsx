@@ -6,6 +6,7 @@ import {
   Dimensions,
   ImageBackground,
   ScrollView,
+  TouchableHighlight,
 } from 'react-native';
 import RenderHTML from 'react-native-render-html';
 
@@ -46,6 +47,7 @@ const Detail = ({route, navigation}) => {
               flexDirection: 'row',
               justifyContent: 'center',
               alignItems: 'center',
+              backgroundColor: '#AFAFAF',
             }}>
             <MaterialIcon
               name="book-open-page-variant-outline"
@@ -53,15 +55,37 @@ const Detail = ({route, navigation}) => {
               color="black"
             />
           </View>
-          <ImageBackground
+          {/* <ImageBackground
             // style={styles.item}
             resizeMode="cover"
             source={{uri: data.volumeInfo.imageLinks.thumbnail}}
             // width={deviceWidth / 2 - 4 * 2}
             // height={200}
-          />
-          <ScrollView>
-            <Text>{data.volumeInfo.title}</Text>
+          /> */}
+          <ScrollView
+            style={{paddingTop: 10, paddingLeft: 10, paddingRight: 10}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignContent: 'center',
+              }}>
+              <Text style={{fontSize: 30, width: 330}}>
+                {data.volumeInfo.title}
+              </Text>
+              <TouchableHighlight
+                style={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                <MaterialIcon
+                  name="bookmark-outline"
+                  size="large"
+                  color="black"
+                />
+              </TouchableHighlight>
+            </View>
+
             <RenderHTML
               source={{
                 html: data.volumeInfo.description,
