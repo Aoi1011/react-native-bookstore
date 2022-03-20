@@ -22,6 +22,7 @@ import {
 
 import SearchBar from './SearchBar';
 import List from './List';
+import Data from '../data.json';
 
 const Home = () => {
   // const data = sampleData;
@@ -31,10 +32,11 @@ const Home = () => {
 
   const getBooks = async () => {
     try {
-      const response = await fetch(
-        'https://www.googleapis.com/books/v1/volumes?q=a',
-      );
-      const json = await response.json();
+      //   const response = await fetch(
+      //     'https://www.googleapis.com/books/v1/volumes?q=a',
+      //   );
+      //   const json = await response.json();
+      const json = Data;
 
       let bookData = json.items.map(item => {
         let vi = item.volumeInfo;
