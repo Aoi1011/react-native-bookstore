@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import {TextInput, TouchableOpacity, View} from 'react-native';
 import {useTheme} from 'react-native-paper';
@@ -7,8 +7,8 @@ import {useTheme} from 'react-native-paper';
 // import * as appActions from '../../store/actions/appActions';
 import {useStyles} from './styles';
 
-const SearchBar: React.FC = () => {
-  //   const [searchText, setSearchText] = useState<string>('');
+const SearchBar = ({searchBook}: {searchBook: any}) => {
+  const [searchText, setSearchText] = useState<string>('');
   const theme = useTheme();
   const styles = useStyles();
   //   const dispatch = useDispatch();
@@ -25,9 +25,9 @@ const SearchBar: React.FC = () => {
         underlineColorAndroid="transparent"
         placeholder={t('Search Here')}
         placeholderTextColor={theme?.colors?.text}
-        // onChangeText={text => setSearchText(text)}
+        onChangeText={text => setSearchText(text)}
         style={styles.searchViewInput}
-        // onEndEditing={() => fetchBookDetails()}
+        onEndEditing={() => searchBook(searchText)}
       />
       <TouchableOpacity
         testID={'searchBookies'}

@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react';
 import {
   StyleSheet,
-  Image,
-  Dimensions,
   View,
   Text,
   Linking,

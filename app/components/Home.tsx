@@ -63,6 +63,34 @@ const Home = ({navigation}) => {
   //     navigation.navigate('Detail');
   //   };
 
+  const searchBook = async (text: string) => {
+    try {
+      const response = await fetch(
+        `https://www.googleapis.com/books/v1/volumes?q=${text}`,
+      );
+      const json = await response.json();
+
+      let bookData = json.items.map(item => {
+        let vi = item.volumeInfo;
+        let year = vi.publishedDate.split('-');
+        return {
+          id: item.id,
+          title: vi.title,
+          authors: vi.authors,
+          description: vi.description,
+          publishedDate: year[0],
+          previewLink: vi.previewLink,
+          selfLink: item.selfLink,
+          link: vi.infoLink,
+          image: vi.imageLinks ? vi.imageLinks.smallThumbnail : '',
+        };
+      });
+      setData(bookData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
     getBooks();
 
@@ -77,7 +105,7 @@ const Home = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Explore</Text>
-      <SearchBar />
+      <SearchBar searchBook={searchBook} />
       <List data={data} navigation={navigation} />
     </SafeAreaView>
   );
