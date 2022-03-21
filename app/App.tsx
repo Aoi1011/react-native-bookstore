@@ -16,9 +16,9 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{
-            headerRight: () => <MenuScreen />,
-          }}
+          options={({navigation}) => ({
+            headerRight: () => <MenuScreen navigation={navigation} />,
+          })}
         />
         <Stack.Screen name="Detail" component={Detail} />
         <Stack.Screen name="Login" component={Login} />
