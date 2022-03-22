@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -8,8 +8,15 @@ import {
   Image,
 } from 'react-native';
 import {} from 'react-native-paper';
+import {AuthContext} from '../navigation/AuthProvider';
 
 const Login = ({navigation}: {navigation: any}) => {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>('');
+
+  const {login} = useContext(AuthContext);
+
   return (
     <View style={styles.container}>
       <Image
@@ -24,6 +31,7 @@ const Login = ({navigation}: {navigation: any}) => {
           placeholderTextColor="#003f5c"
           style={styles.textInput}
           autoCapitalize="none"
+          onChangeText={_email => setEmail(_email)}
         />
       </View>
       <View style={styles.inputView}>
@@ -32,8 +40,11 @@ const Login = ({navigation}: {navigation: any}) => {
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
           style={styles.textInput}
+          onChangeText={_password => setPassword(_password)}
         />
       </View>
+
+      <Text>{errorMessage && <Text>{errorMessage}</Text>}</Text>
       <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
         <TouchableOpacity>
           <Text
@@ -47,7 +58,9 @@ const Login = ({navigation}: {navigation: any}) => {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity
+        style={styles.loginBtn}
+        onPress={() => login(email, password)}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
