@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {} from 'react-native-paper';
 
-const Login = ({navigation}: {navigation: any}) => {
+const Signup = ({navigation}: {navigation: any}) => {
   return (
     <View style={styles.container}>
       <Image
@@ -34,21 +34,17 @@ const Login = ({navigation}: {navigation: any}) => {
           style={styles.textInput}
         />
       </View>
-      <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-        <TouchableOpacity>
-          <Text
-            style={styles.forgot_button}
-            onPress={() => navigation.navigate('Signup')}>
-            Create account
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.forgot_button}>Forgot Password?</Text>
-        </TouchableOpacity>
+      <View style={styles.inputView}>
+        <TextInput
+          placeholder="Password"
+          placeholderTextColor="#003f5c"
+          secureTextEntry={true}
+          style={styles.textInput}
+        />
       </View>
 
       <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.loginText}>LOGIN</Text>
+        <Text style={styles.loginText}>SIGN UP</Text>
       </TouchableOpacity>
     </View>
   );
@@ -102,4 +98,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Signup;

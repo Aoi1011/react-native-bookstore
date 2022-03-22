@@ -23,6 +23,10 @@ const Routes = () => {
     return subscriber;
   }, []);
 
+  if (initializing) {
+    return null;
+  }
+
   return (
     <NavigationContainer>
       {user ? <AppStack /> : <AuthStack />}
