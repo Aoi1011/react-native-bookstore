@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -8,8 +8,15 @@ import {
   Image,
 } from 'react-native';
 import {} from 'react-native-paper';
+import {AuthContext} from '../navigation/AuthProvider';
 
 const Signup = ({navigation}: {navigation: any}) => {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [confirmPassword, setConfirmPassword] = useState<string>('');
+
+  const {register} = useContext(AuthContext);
+
   return (
     <View style={styles.container}>
       <Image
@@ -24,6 +31,7 @@ const Signup = ({navigation}: {navigation: any}) => {
           placeholderTextColor="#003f5c"
           style={styles.textInput}
           autoCapitalize="none"
+          onChangeText={_email => setEmail(_email)}
         />
       </View>
       <View style={styles.inputView}>
@@ -32,18 +40,22 @@ const Signup = ({navigation}: {navigation: any}) => {
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
           style={styles.textInput}
+          onChangeText={_password => setPassword(_password)}
         />
       </View>
       <View style={styles.inputView}>
         <TextInput
-          placeholder="Password"
+          placeholder="Confirm Password"
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
           style={styles.textInput}
+          onChangeText={_password => setPassword(_password)}
         />
       </View>
 
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity
+        style={styles.loginBtn}
+        onPress={() => register(email, password)}>
         <Text style={styles.loginText}>SIGN UP</Text>
       </TouchableOpacity>
     </View>

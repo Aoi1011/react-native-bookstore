@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import {Button} from 'react-native-elements';
-import {Menu, MenuItem, MenuDivider} from 'react-native-material-menu';
+import {Menu, MenuItem} from 'react-native-material-menu';
 import {MaterialIcon} from '../components/Icon';
+import {AuthContext} from '../navigation/AuthProvider';
 
 export default function MenuScreen({navigation}: {navigation: any}) {
   const [visible, setVisible] = useState(false);
 
+  const {user, logout} = useContext(AuthContext);
+
   const handleLogin = () => {
-    navigation.push('Login');
-    setVisible(false);
+    logout();
   };
 
   const hideMenu = () => setVisible(false);
@@ -31,7 +33,7 @@ export default function MenuScreen({navigation}: {navigation: any}) {
           />
         }
         onRequestClose={hideMenu}>
-        <MenuItem onPress={handleLogin}>LOGIN</MenuItem>
+        <MenuItem onPress={handleLogin}>LOGOUT</MenuItem>
       </Menu>
     </View>
   );
