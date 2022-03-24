@@ -72,13 +72,13 @@ const Home = ({navigation}) => {
 
       let bookData = json.items.map(item => {
         let vi = item.volumeInfo;
-        let year = vi.publishedDate.split('-');
+        // let year = vi.publishedDate.split('-');
         return {
           id: item.id,
           title: vi.title,
           authors: vi.authors,
           description: vi.description,
-          publishedDate: year[0],
+          publishedDate: vi.publishedDate,
           previewLink: vi.previewLink,
           selfLink: item.selfLink,
           link: vi.infoLink,

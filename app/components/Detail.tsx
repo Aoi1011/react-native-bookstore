@@ -114,7 +114,7 @@ const Detail = ({route, navigation}) => {
               </Text>
               <RenderHTML
                 source={{
-                  html: data.volumeInfo.description,
+                  html: data.volumeInfo?.description,
                 }}
               />
             </View>
@@ -130,7 +130,8 @@ const Detail = ({route, navigation}) => {
               <View style={styles.horizontal}>
                 <Text style={styles.horizontalTitle}>GENRE</Text>
                 <Text style={styles.horizontalTitle}>
-                  {data.volumeInfo.categories[0]}
+                  {data.volumeInfo?.categories &&
+                    data.volumeInfo?.categories[0]}
                 </Text>
               </View>
               <View
@@ -142,7 +143,7 @@ const Detail = ({route, navigation}) => {
               <View style={styles.horizontal}>
                 <Text style={styles.horizontalTitle}>PUBLISHED DATE</Text>
                 <Text style={styles.horizontalTitle}>
-                  {data.volumeInfo.publishedDate}
+                  {data.volumeInfo?.publishedDate}
                 </Text>
               </View>
               <View
@@ -154,7 +155,7 @@ const Detail = ({route, navigation}) => {
               <View style={styles.horizontal}>
                 <Text style={styles.horizontalTitle}>PUBLISHER</Text>
                 <Text style={styles.horizontalTitle}>
-                  {data.volumeInfo.publisher}
+                  {data.volumeInfo?.publisher}
                 </Text>
               </View>
               <View
