@@ -32,21 +32,21 @@ const Home = ({navigation}) => {
 
   const getBooks = async () => {
     try {
-      //   const response = await fetch(
-      //     'https://www.googleapis.com/books/v1/volumes?q=a',
-      //   );
-      //   const json = await response.json();
+      // const response = await fetch(
+      //   'https://www.googleapis.com/books/v1/volumes?q=a',
+      // );
+      // const json = await response.json();
       const json = Data;
 
       let bookData = json.items.map(item => {
         let vi = item.volumeInfo;
-        let year = vi.publishedDate.split('-');
+        // let year = vi.publishedDate.split('-');
         return {
           id: item.id,
           title: vi.title,
           authors: vi.authors,
           description: vi.description,
-          publishedDate: year[0],
+          publishedDate: vi.publishedDate,
           previewLink: vi.previewLink,
           selfLink: item.selfLink,
           link: vi.infoLink,
