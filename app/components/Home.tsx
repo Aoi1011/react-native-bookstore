@@ -1,33 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  ActivityIndicator,
-  FlatList,
-  Image,
-  LogBox,
-} from 'react-native';
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
+import {SafeAreaView, StatusBar, StyleSheet, Text} from 'react-native';
 import SearchBar from './SearchBar';
 import List from './List';
 import Data from '../data.json';
 
 const Home = ({navigation}) => {
-  // const data = sampleData;
-  const [titles, setTitles] = useState<string[]>();
   const [data, setData] = useState<any[]>([]);
 
   const getBooks = async () => {
@@ -59,10 +36,6 @@ const Home = ({navigation}) => {
     }
   };
 
-  //   const handleDetail = () => {
-  //     navigation.navigate('Detail');
-  //   };
-
   const searchBook = async (text: string) => {
     try {
       const response = await fetch(
@@ -93,13 +66,6 @@ const Home = ({navigation}) => {
 
   useEffect(() => {
     getBooks();
-
-    // responseItems.map(item => {
-    //   console.log(item.volumeInfo.title);
-    //   titles?.push(item.volumeInfo.title);
-
-    //   console.log('Title 1', titles![1]);
-    // });
   }, []);
 
   return (
