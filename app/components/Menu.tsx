@@ -11,8 +11,13 @@ export default function MenuScreen({navigation}: {navigation: any}) {
 
   const {user, logout} = useContext(AuthContext);
 
-  const handleLogin = () => {
+  const handleLogout = () => {
     logout();
+  };
+
+  const handleBookmark = () => {
+    navigation.navigate('Bookmark');
+    hideMenu();
   };
 
   const hideMenu = () => setVisible(false);
@@ -33,7 +38,8 @@ export default function MenuScreen({navigation}: {navigation: any}) {
           />
         }
         onRequestClose={hideMenu}>
-        <MenuItem onPress={handleLogin}>LOGOUT</MenuItem>
+        <MenuItem onPress={handleBookmark}>BOOKMARK</MenuItem>
+        <MenuItem onPress={handleLogout}>LOGOUT</MenuItem>
       </Menu>
     </View>
   );

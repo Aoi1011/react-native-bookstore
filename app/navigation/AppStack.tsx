@@ -6,6 +6,7 @@ const Stack = createNativeStackNavigator();
 import Home from '../components/Home';
 import Detail from '../components/Detail';
 import MenuScreen from '../components/Menu';
+import Bookmark from '../components/Bookmark';
 
 const AppStack = () => {
   return (
@@ -18,6 +19,7 @@ const AppStack = () => {
         })}
       />
       <Stack.Screen name="Detail" component={Detail} />
+      <Stack.Screen name="Bookmark" component={Bookmark} />
     </Stack.Navigator>
   );
 };

@@ -1,23 +1,25 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {
   Text,
   View,
   ActivityIndicator,
   Dimensions,
-  ImageBackground,
   ScrollView,
-  TouchableHighlight,
   StyleSheet,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import RenderHTML from 'react-native-render-html';
+import {firebase} from '@react-native-firebase/database';
 
 import {MaterialIcon} from './Icon';
+import {AuthContext} from '../navigation/AuthProvider';
 
 const deviceWidth = Dimensions.get('window').width;
 const Detail = ({route, navigation}) => {
   const [data, setData] = useState<any>({});
   const [isLoading, setIsLoading] = useState(true);
+  const {user, setUser} = useContext(AuthContext);
 
   const getBook = async () => {
     try {
@@ -32,6 +34,108 @@ const Detail = ({route, navigation}) => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleBookmark = async () => {
+    const reference = firebase
+      .app()
+      .database(
+        'https://book-store-8c0cb-default-rtdb.asia-southeast1.firebasedatabase.app/',
+      )
+      // @ts-ignore
+      .ref(`/bookmarks/${user.uid}`);
+
+    const val = await reference.once('value').then(snapshot => {
+      let userData;
+      console.log('User data: ', snapshot.val());
+
+      userData = snapshot.val();
+
+      if (userData === null) {
+        const newReference = firebase
+          .app()
+          .database(
+            'https://book-store-8c0cb-default-rtdb.asia-southeast1.firebasedatabase.app/',
+          )
+          // @ts-ignore
+          .ref(`/bookmarks/${user.uid}`)
+          .push();
+
+        console.log('Auto generated key: ', newReference.key);
+
+        newReference
+          .set({
+            id: data.id,
+            title: data.volumeInfo.title,
+            authors: data.volumeInfo.authors,
+            description: data.volumeInfo.description,
+            publishedDate: data.volumeInfo.publishedDate,
+            previewLink: data.volumeInfo.previewLink,
+            selfLink: data.selfLink,
+            link: data.volumeInfo.infoLink,
+            image: data.volumeInfo.imageLinks
+              ? data.volumeInfo.imageLinks.smallThumbnail
+              : '',
+          })
+          .then(() => {
+            console.log('Data updated');
+          });
+      }
+
+      if (userData !== null) {
+        const length = userData.length;
+        const newReference = firebase
+          .app()
+          .database(
+            'https://book-store-8c0cb-default-rtdb.asia-southeast1.firebasedatabase.app/',
+          )
+          // @ts-ignore
+          .ref(`/bookmarks/${user.uid}`)
+          .push();
+
+        console.log('Auto generated key: ', newReference.key);
+
+        newReference
+          .set({
+            id: data.id,
+            title: data.volumeInfo.title,
+            authors: data.volumeInfo.authors,
+            description: data.volumeInfo.description,
+            publishedDate: data.volumeInfo.publishedDate,
+            previewLink: data.volumeInfo.previewLink,
+            selfLink: data.selfLink,
+            link: data.volumeInfo.infoLink,
+            image: data.volumeInfo.imageLinks
+              ? data.volumeInfo.imageLinks.smallThumbnail
+              : '',
+          })
+          .then(() => {
+            console.log('Data updated');
+          });
+      }
+    });
+
+    console.log(val);
+    // reference.
+
+    // reference
+    //   .set({
+    //     // @ts-ignore
+    //     user: user.uid,
+    //     link: route.params.selfLink,
+    //   })
+    //   .then(() => console.log('Data set!'));
+
+    // const newReference = database().ref('/bookmarks').push();
+    // console.log('Auto generated key: ', newReference.key);
+    // newReference
+    //   .set({
+    //     link: route.params.selfLink,
+    //   })
+    //   .then(() => console.log('Data updated'))
+    //   .catch(err => {
+    //     console.error(err);
+    //   });
   };
 
   useEffect(() => {
@@ -50,7 +154,7 @@ const Detail = ({route, navigation}) => {
               paddingLeft: 10,
               paddingRight: 10,
             }}>
-            <View
+            {/* <View
               style={{
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -62,14 +166,16 @@ const Detail = ({route, navigation}) => {
                 size="extraLarge"
                 color="black"
               />
-            </View>
-            {/* <ImageBackground
-            // style={styles.item}
-            resizeMode="cover"
-            source={{uri: data.volumeInfo.imageLinks.thumbnail}}
-            // width={deviceWidth / 2 - 4 * 2}
-            // height={200}
-          /> */}
+            </View> */}
+            <Image
+              style={styles.logo}
+              // resizeMode="cover"
+              source={{
+                uri: 'https://jblm.armymwr.com/application/files/4216/2809/3952/9388177-Afterthought-Book-Club-Web.gif',
+              }}
+              // width={deviceWidth / 2 - 4 * 2}
+              // height={200}
+            />
 
             <View
               style={{
@@ -81,17 +187,18 @@ const Detail = ({route, navigation}) => {
               <Text style={{fontSize: 30, width: 330}}>
                 {data.volumeInfo.title}
               </Text>
-              <TouchableHighlight
+              <TouchableOpacity
                 style={{
                   alignItems: 'center',
                   justifyContent: 'center',
-                }}>
+                }}
+                onPress={handleBookmark}>
                 <MaterialIcon
                   name="bookmark-outline"
                   size="large"
                   color="black"
                 />
-              </TouchableHighlight>
+              </TouchableOpacity>
             </View>
             <TouchableOpacity style={styles.button}>
               <Text>ORDER</Text>
@@ -185,6 +292,11 @@ const Detail = ({route, navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  logo: {
+    width: 360,
+    height: 200,
+    marginBottom: 30,
+  },
   buttonContainer: {
     paddingBottom: 30,
     paddingHorizontal: 12,

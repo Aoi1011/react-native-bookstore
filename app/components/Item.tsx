@@ -23,6 +23,7 @@ const Item = ({
     });
   };
   useEffect(() => {
+    console.log(photo);
     photo.image = 'https://reactnative.dev/img/tiny_logo.png';
     // console.log(photo.authors);
   }, [photo]);
